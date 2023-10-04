@@ -10,7 +10,6 @@ import {
 } from "@material-tailwind/react";
 const AirtableDataFetcher = () => {
     const [data, setData] = useState([]);
-    const [projectLikes, setProjectLikes] = useState(0)
     const apiKey = 'patHyY2OjefFuIDOn.86253e204fdd2f636e0300f2fa54e77b0f000d44d317fe80960fb9be3fc1a669';
     const baseId = 'appuPpMhTxQnKDkyi';
     const table = 'REGISTRO';
@@ -58,7 +57,7 @@ const AirtableDataFetcher = () => {
             {data.map((record, index) => {
                 if (record.fields.Aprobado) {
                     return (
-                        <Card className="mt-6 sm:w-96 md:w-80 lg:w-64 xl:w-96">
+                        <Card key={index} className="mt-6 sm:w-96 md:w-80 lg:w-64 xl:w-96">
                             <CardHeader color="blue-gray" className="relative h-56">
                                 <img
                                     src={record.fields.Logo[0].url}
@@ -69,7 +68,7 @@ const AirtableDataFetcher = () => {
                             <CardBody className="flex flex-col">
                                 <Typography>{record.fields['Nombre del proyecto']}</Typography>
                                 <Typography>{record.fields['Describe tu proyecto']}</Typography>
-                                <Typography>{record.id}</Typography>
+                                {/* <Typography>{record.id}</Typography> */}
                             </CardBody>
                             <CardFooter className="pt-0">
                                 <Button onClick={() => {
