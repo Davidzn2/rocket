@@ -51,14 +51,7 @@ export default function CarouselWithContent() {
               color="white"
               className="mb-4 text-3xl md:text-4xl lg:text-5xl"
             >
-              Rocket Challenge, el concurso de emprendimiento
-            </Typography>
-            <Typography
-              variant="lead"
-              color="white"
-              className="mb-12 opacity-80"
-            >
-              Nuestra misión es brindar la formación, las herramientas, la motivación y la práctica para el emprendimiento a través de la experiencia
+              ¡Atrevete a emprender!
             </Typography>
             <div className="flex gap-2">
               <Link to="/inscribete">
