@@ -45,11 +45,11 @@ function App() {
         <div className="flex h-60 w-full justify-center items-center">
           <img src={ibonds} className="h-full w-fit" alt="" />
         </div>
-        <div className="h-72 w-full  grid grid-cols-4 justify-center content-center">
-          <img src={anahuac} className="h-fit w-full" alt="" />
-          <img src={wyi} className="h-fit w-full" alt="" />
-          <img src={Maguen} className="h-fit w-full" alt="" />
-          <img src={Blue} className="h-fit w-full" alt="" />
+        <div className="h-72 w-full grid grid-cols-4 justify-center content-center">
+          <img src={anahuac} className="h-fit " alt="" />
+          <img src={wyi} className="h-fit " alt="" />
+          <img src={Maguen} className="h-fit " alt="" />
+          <img src={Blue} className="h-fit " alt="" />
         </div>
       </div>
 
