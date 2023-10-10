@@ -21,13 +21,6 @@ export default function CarouselWithContent() {
             >
               ¡Tu futuro es Ahora!
             </Typography>
-            <Typography
-              variant="lead"
-              color="white"
-              className="mb-12 opacity-80"
-            >
-              Somos el concurso de emprendimiento para jovenes de Bachillerato de la comnuidad judia de México
-            </Typography>
             <div className="flex justify-center gap-2">
               <Link to="/inscribete">
                 <Button size="lg" color="white">
