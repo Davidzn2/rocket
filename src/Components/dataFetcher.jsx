@@ -69,12 +69,12 @@ const AirtableDataFetcher = () => {
                 <Typography>{record.fields['Nombre del proyecto']}</Typography>
                 <Typography>{record.fields['Describe tu proyecto']}</Typography>
               </CardBody>
-              {/* <CardFooter className="pt-0">
+              <CardFooter className="pt-0">
                 <Button onClick={() => {
                   likeProject(record.id, record.fields.Likes)
                 }}>Dar like a este proyecto</Button>
                 <Typography>Likes: {record.fields.Likes}</Typography>
-              </CardFooter> */}
+              </CardFooter>
             </Card>
           )
         }
