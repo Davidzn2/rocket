@@ -37,9 +37,9 @@ export default function Header() {
         color="blue-gray"
         className="p-1 font-normal"
       >
-        {/* <Link to="/proyectos" className="flex items-center">
+        <Link to="/proyectos" className="flex items-center">
           Proyectos
-        </Link> */}
+        </Link>
       </Typography>
       <Typography
         as="li"
