@@ -9,7 +9,7 @@ import anahuac from '../../assets/LOGOS/Logo_Anahuac.png'
 import wyi from '../../assets/LOGOS/logo_wyi-01.webp'
 import Blue from '../../assets/LOGOS/Blue_Ivy_Logo.png'
 import Maguen from '../../assets/LOGOS/maguen.png'
-import calendar from '../../assets/calendario2.png'
+import calendar from '../../assets/calendario3.png'
 function App() {
   return (
     <>
