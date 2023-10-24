@@ -26,7 +26,7 @@ function App() {
         </div>
       </div>
       <div className="flex justify-center">
-        <iframe width="860" height="615" src="https://www.youtube.com/embed/CZ8Ac1oQ-5I?si=6TH4MjSZqHQvsJzU" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <iframe width="80%" height="615" src="https://www.youtube.com/embed/CZ8Ac1oQ-5I?si=6TH4MjSZqHQvsJzU" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
       </div>
       {/* <Gallery /> */}
       <div className="flex justify-center">
