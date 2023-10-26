@@ -3,8 +3,8 @@ import Back1 from '../../static/fondos/back1.jpg'
 import Back2 from '../../static/fondos/back2.jpg'
 import Back3 from '../../static/fondos/back3.jpg'
 import Back4 from '../../static/fondos/back4.jpg'
-import Back5 from '../../static/fondos/back5.jpg'
-import Back6 from '../../static/fondos/back6.jpg'
+// import Back5 from '../../static/fondos/back5.jpg'
+// import Back6 from '../../static/fondos/back6.jpg'
 
 import { Link } from 'react-router-dom'
 
