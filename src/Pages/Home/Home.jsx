@@ -6,10 +6,10 @@ import Gallery from '../../Components/Gallery/Gallery'
 // Images
 import ibonds from '../../assets/LOGOS/israel-bonds-logo.jpg'
 import anahuac from '../../assets/LOGOS/Logo_Anahuac.png'
-import wyi from '../../assets/LOGOS/logo_wyi-01.webp'
+import wyi from '../../assets/LOGOS/wyi-ok.png'
 import Blue from '../../assets/LOGOS/Blue_Ivy_Logo.png'
 import Maguen from '../../assets/LOGOS/maguen.png'
-import calendar from '../../assets/calendario3.png'
+import calendar from '../../assets/calendario4.png'
 function App() {
   return (
     <>
@@ -28,12 +28,10 @@ function App() {
       <div className="flex justify-center">
         <iframe width="80%" height="615" src="https://www.youtube.com/embed/CZ8Ac1oQ-5I?si=6TH4MjSZqHQvsJzU" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
       </div>
-      {/* <Gallery /> */}
       <div className="flex justify-center">
-
         <img src={calendar} alt="" />
       </div>
-
+      <Gallery />
       <div className="logos p-20">
         <div className="flex w-full justify-center items-center">
           <h2 className=" text-4xl font-bold">

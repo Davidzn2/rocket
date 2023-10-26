@@ -1,5 +1,9 @@
 import './Contact.css'
 import AirtableForm from '../../Components/Airtable/AirtableForm'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faInstagram } from '@fortawesome/free-brands-svg-icons';
+import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import Header from '../../Components/Layout/Header'
 import Footer from '../../Components/Layout/Footer'
 function Contact() {
@@ -15,10 +19,6 @@ function Contact() {
           </h2>
 
           <div className="max-w-md mx-auto bg-white p-6 rounded-lg shadow-md">
-            <p className="text-center text-gray-700">
-              Si necesitas ayuda o tienes un comentario, por favor contáctanos.
-              Te responderemos tan pronto sea posible.
-            </p>
 
             <p className="mt-6 text-center text-gray-700">
               Conoce nuestras redes sociales:
@@ -26,22 +26,20 @@ function Contact() {
 
             <ul className="mt-4 text-gray-700">
               <li className="mb-2">
-                <i className="fab fa-instagram text-lg mr-2"></i>
-                <a href="https://www.instagram.com/wyirock/">Instagram: wyirock</a>
+                <FontAwesomeIcon icon={faInstagram} className="text-lg mr-2" />
+                <a href="https://www.instagram.com/wyirock/">wyirock</a>
               </li>
               <li className="mb-2">
                 <a href="https://wa.me/5551107634">
-                  <i className="fab fa-whatsapp text-lg mr-2"></i>
-                  Consultas y atención por WhatsApp
+                  <FontAwesomeIcon icon={faWhatsapp} className="text-lg mr-2" />
+                  Atención por WhatsApp
                 </a>
               </li>
               <li>
-                <i className="far fa-envelope text-lg mr-2"></i>
+                <FontAwesomeIcon icon={faEnvelope} className="text-lg mr-2" />
                 <a href="mailto:rocketchallenge1@gmail.com">rocketchallenge1@gmail.com</a>
-
               </li>
             </ul>
-
             <div className="mt-6">
               <AirtableForm base_id="appNhtOTjlFOnUTDy" table="shritb0qCp3Em22Qr" />
             </div>
