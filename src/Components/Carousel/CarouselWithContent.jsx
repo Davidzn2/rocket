@@ -20,16 +20,16 @@ export default function CarouselWithContent() {
         <div className="absolute inset-0 grid h-full w-full place-items-center bg-black/50">
           <div className="w-3/4 text-center md:w-2/4">
             <Typography
-              variant="h1"
+              variant="h3"
               color="white"
               className="mb-4 text-3xl md:text-4xl lg:text-5xl"
             >
-              Emprender es el primer paso hacia el logro de tus sueños. ¡No esperes más!
+              Emprender es el primer paso hacia el logro de tus sueños.
             </Typography>
             <div className="flex justify-center gap-2">
               <Link to="/inscribete">
                 <Button size="lg" color="white">
-                  Inscribete ahora
+                  ¡No esperes más!
                 </Button>
               </Link>
             </div>
@@ -45,16 +45,16 @@ export default function CarouselWithContent() {
         <div className="absolute inset-0 grid h-full w-full items-center bg-black/75">
           <div className="w-3/4 pl-12 md:w-2/4 md:pl-20 lg:pl-32">
             <Typography
-              variant="h1"
+              variant="h3"
               color="white"
               className="mb-4 text-3xl md:text-4xl lg:text-5xl"
             >
-              El único limitante para tus ideas eres tú mismo. ¡Confía en ti y ve tras ellas!
+              El único limitante para tus ideas eres tú mismo.
             </Typography>
             <div className="flex gap-2">
               <Link to="/inscribete">
                 <Button size="lg" color="white">
-                  Inscribete ahora
+                  ¡Confía en ti y ve tras ellas!
                 </Button>
               </Link>
             </div>
@@ -70,7 +70,7 @@ export default function CarouselWithContent() {
         <div className="absolute inset-0 grid h-full w-full items-center bg-black/75">
           <div className="w-3/4 pl-12 md:w-2/4 md:pl-20 lg:pl-32">
             <Typography
-              variant="h1"
+              variant="h3"
               color="white"
               className="mb-4 text-3xl md:text-4xl lg:text-5xl"
             >
@@ -95,7 +95,7 @@ export default function CarouselWithContent() {
         <div className="absolute inset-0 grid h-full w-full items-center bg-black/75">
           <div className="w-3/4 pl-12 md:w-2/4 md:pl-20 lg:pl-32">
             <Typography
-              variant="h1"
+              variant="h3"
               color="white"
               className="mb-4 text-3xl md:text-4xl lg:text-5xl"
             >

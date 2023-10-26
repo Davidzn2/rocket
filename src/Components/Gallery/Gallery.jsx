@@ -2,19 +2,19 @@ import { useState } from 'react';
 import './Gallery.css';
 
 const images = [
-  '../../assets/viaje/1.jpg',
-  '../../assets/viaje/2.jpg',
-  '../../assets/viaje/3.jpg',
-  '../../assets/viaje/4.jpg',
-  '../../assets/viaje/5.jpg',
-  '../../assets/viaje/6.jpg',
-  '../../assets/viaje/7.jpg',
-  '../../assets/viaje/20.jpg',
-  '../../assets/viaje/21.jpg',
-  '../../assets/viaje/22.jpg',
-  '../../assets/viaje/23.jpg',
-  '../../assets/viaje/24.jpg',
-  '../../assets/viaje/25.jpg'
+  '/assets/viaje/1.jpg',
+  '/assets/viaje/2.jpg',
+  '/assets/viaje/3.jpg',
+  '/assets/viaje/4.jpg',
+  '/assets/viaje/5.jpg',
+  '/assets/viaje/6.jpg',
+  '/assets/viaje/7.jpg',
+  '/assets/viaje/20.jpg',
+  '/assets/viaje/21.jpg',
+  '/assets/viaje/22.jpg',
+  '/assets/viaje/23.jpg',
+  '/assets/viaje/24.jpg',
+  '/assets/viaje/25.jpg'
 ];
 
 function Gallery() {
