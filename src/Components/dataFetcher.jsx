@@ -53,29 +53,29 @@ const AirtableDataFetcher = () => {
   }
 
   return (
-    <div className="grid grid-cols-3">
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
       {data.map((record, index) => {
         if (record.fields.Aprobado) {
           return (
-            <Card key={index} className="mt-6 sm:w-96 md:w-80 lg:w-64 xl:w-96">
-              <CardHeader color="blue-gray" className="relative h-56">
-                <img
-                  src={record.fields.Logo[0].url}
-                  alt="card-image"
-                  className="object-cover w-full h-full"
-                />
-              </CardHeader>
-              <CardBody className="flex flex-col">
-                <Typography>{record.fields['Nombre del proyecto']}</Typography>
-                <Typography>{record.fields['Describe tu proyecto']}</Typography>
-              </CardBody>
-              <CardFooter className="pt-0">
-                <Button onClick={() => {
-                  likeProject(record.id, record.fields.Likes)
-                }}>Dar like a este proyecto</Button>
-                <Typography>Likes: {record.fields.Likes}</Typography>
-              </CardFooter>
-            </Card>
+            <div key={index}>
+              <Card className="mt-6">
+                <CardHeader color="blue-gray" className="relative h-56">
+                  <img
+                    src={record.fields.Logo[0].url}
+                    alt="card-image"
+                    className="object-cover w-full h-full"
+                  />
+                </CardHeader>
+                <CardBody className="flex flex-col">
+                  <Typography>{record.fields['Nombre del proyecto']}</Typography>
+                  <Typography>{record.fields['Describe tu proyecto']}</Typography>
+                </CardBody>
+                <CardFooter className="pt-0">
+                  {/* <Button onClick={() => likeProject(record.id, record.fields.Likes)}>Dar like a este proyecto</Button> */}
+                  {/* <Typography>Likes: {record.fields.Likes}</Typography> */}
+                </CardFooter>
+              </Card>
+            </div>
           )
         }
       })}
