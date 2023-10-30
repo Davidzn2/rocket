@@ -49,14 +49,20 @@ function Project() {
               alt="card-image"
               className="object-cover w-1/2 h-48 md:h-64 lg:h-80"
             />
-            <video
-              width="750"
-              height="500"
-              controls
-              className="w-1/2 h-48 md:h-64 lg:h-80"
-            >
-              <source src={data?.fields.Video[0].url} type="video/mp4" />
-            </video>
+            {data?.fields.Video && data?.fields.Video.length > 0 ? (
+              <video
+                width="750"
+                height="500"
+                controls
+                className="w-1/2 h-48 md:h-64 lg:h-80"
+              >
+                <source src={data?.fields.Video[0].url} type="video/mp4" />
+              </video>
+            ) : (
+              <div className="w-1/2 h-48 md:h-64 lg:h-80 flex items-center justify-center">
+                Video no disponible
+              </div>
+            )}Z
           </CardHeader>
           <CardBody className="flex flex-col">
             <Typography>{data?.fields['Nombre del proyecto']}</Typography>
