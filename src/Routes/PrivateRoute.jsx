@@ -1,7 +1,7 @@
-import React from 'react';
 import { Route, Navigate } from 'react-router-dom';
 import { useAuth } from '../Contexts/AuthContext';
 
+// eslint-disable-next-line react/prop-types
 function PrivateRoute({ component: Component, ...rest }) {
     const { currentUser } = useAuth();
 

@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 import {
   Card,
   CardHeader,
@@ -33,6 +34,7 @@ const AirtableDataFetcher = () => {
 
     fetchData();
   }, []);
+
   const likeProject = async (record_id, likes) => {
     console.log(record_id, likes)
     try {
@@ -59,28 +61,31 @@ const AirtableDataFetcher = () => {
           return (
             <div key={index}>
               <Card className="mt-6">
-                <CardHeader color="blue-gray" className="relative h-56">
-                  <img
-                    src={record.fields.Logo[0].url}
-                    alt="card-image"
-                    className="object-cover w-full h-full"
-                  />
-                </CardHeader>
-                <CardBody className="flex flex-col">
-                  <Typography>{record.fields['Nombre del proyecto']}</Typography>
-                  {/* <Typography>{record.fields['Describe tu proyecto']}</Typography> */}
-                </CardBody>
+                <Link to={`/proyecto/${record.id}`}>
+                  <CardHeader color="blue-gray" className="relative h-56">
+                    <img
+                      src={record.fields.Logo[0].url}
+                      alt="card-image"
+                      className="object-cover w-full h-full"
+                    />
+                  </CardHeader>
+                  <CardBody className="flex flex-col">
+                    <Typography>{record.fields['Nombre del proyecto']}</Typography>
+                    {/* <Typography>{record.fields['Describe tu proyecto']}</Typography> */}
+                  </CardBody>
+                </Link>
+
                 <CardFooter className="pt-0">
                   {/* <Button onClick={() => likeProject(record.id, record.fields.Likes)}>Dar like a este proyecto</Button> */}
                   {/* <Typography>Likes: {record.fields.Likes}</Typography> */}
                 </CardFooter>
               </Card>
-            </div>
+            </div >
           )
         }
       })}
 
-    </div>
+    </div >
   );
 };
 
