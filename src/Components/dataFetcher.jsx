@@ -1,6 +1,6 @@
-import { useState, useEffect } from 'react';
-import axios from 'axios';
-import { Link } from 'react-router-dom';
+import { useState, useEffect } from "react";
+import axios from "axios";
+import { Link } from "react-router-dom";
 import {
   Card,
   CardHeader,
@@ -9,85 +9,106 @@ import {
   Typography,
   Button,
 } from "@material-tailwind/react";
+import LoginModal from "./LoginModal/LoginModal";
 const AirtableDataFetcher = () => {
   const [data, setData] = useState([]);
-  const apiKey = 'patHyY2OjefFuIDOn.86253e204fdd2f636e0300f2fa54e77b0f000d44d317fe80960fb9be3fc1a669';
-  const baseId = 'appuPpMhTxQnKDkyi';
-  const table = 'REGISTRO';
+  const [modalIsOpen, setIsOpen] = useState(false);
+  const apiKey =
+    "patHyY2OjefFuIDOn.86253e204fdd2f636e0300f2fa54e77b0f000d44d317fe80960fb9be3fc1a669";
+  const baseId = "appuPpMhTxQnKDkyi";
+  const table = "REGISTRO";
   const config = {
     headers: {
       Authorization: `Bearer ${apiKey}`,
     },
-  }
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await axios.get(
-          `https://api.airtable.com/v0/${baseId}/${table}/`,
-          config
-        );
-        setData(response.data.records);
-      } catch (error) {
-        console.error('Error fetching data:', error);
-      }
-    };
+  };
 
+  const fetchData = async () => {
+    try {
+      const response = await axios.get(
+        `https://api.airtable.com/v0/${baseId}/${table}/`,
+        config
+      );
+      setData(response.data.records);
+    } catch (error) {
+      console.error("Error fetching data:", error);
+    }
+  };
+
+  useEffect(() => {
     fetchData();
   }, []);
 
-  const likeProject = async (record_id, likes) => {
-    console.log(record_id, likes)
+  const likeProject = async (record_id) => {
+    console.log(record_id);
     try {
-      const response = await axios.patch(
-        `https://api.airtable.com/v0/${baseId}/${table}/${record_id}`,
+      const response = await axios.post(
+        `${import.meta.env.VITE_BASE_URL}/vote`,
         {
-          fields: {
-            Likes: likes + 1
-          },
+          record_id,
         },
-        config
+        {
+          headers: {
+            authorization: `${localStorage.getItem("token")}`,
+          },
+        }
       );
-      console.log(data.id)
-      console.log(data)
+      alert(`Te quedan ${3 - response.data.votes } votos`);
+      fetchData();
     } catch (error) {
-      console.error('Error al actualizar el registro:', error);
+      alert(error.response.data.error);
+      console.error("Error al actualizar el registro:", error);
     }
-  }
+  };
 
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
-      {data.map((record, index) => {
-        if (record.fields.Aprobado) {
-          return (
-            <div key={index}>
-              <Card className="mt-6">
-                <Link to={`/proyecto/${record.id}`}>
-                  <CardHeader color="blue-gray" className="relative h-56">
-                    <img
-                      src={record.fields.Logo[0].url}
-                      alt="card-image"
-                      className="object-cover w-full h-full"
-                    />
-                  </CardHeader>
-                  <CardBody className="flex flex-col">
-                    <Typography>{record.fields['Nombre del proyecto']}</Typography>
-                    {/* <Typography>{record.fields['Describe tu proyecto']}</Typography> */}
-                  </CardBody>
-                </Link>
+    <>
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+        {data.map((record, index) => {
+          if (record.fields.Aprobado) {
+            return (
+              <div key={index}>
+                <Card className="mt-6">
+                  <Link to={`/proyecto/${record.id}`}>
+                    <CardHeader color="blue-gray" className="relative h-56">
+                      <img
+                        src={record.fields.Logo[0].url}
+                        alt="card-image"
+                        className="object-cover w-full h-full"
+                      />
+                    </CardHeader>
+                    <CardBody className="flex flex-col">
+                      <Typography>
+                        {record.fields["Nombre del proyecto"]}
+                      </Typography>
+                      {/* <Typography>{record.fields['Describe tu proyecto']}</Typography> */}
+                    </CardBody>
+                  </Link>
 
-                <CardFooter className="pt-0">
-                  {/* <Button onClick={() => likeProject(record.id, record.fields.Likes)}>Dar like a este proyecto</Button> */}
-                  {/* <Typography>Likes: {record.fields.Likes}</Typography> */}
-                </CardFooter>
-              </Card>
-            </div >
-          )
-        }
-      })}
+                  <CardFooter className="pt-0">
+                    <Button
+                      onClick={() => {
+                        if (localStorage.getItem("token") === null) {
+                          setIsOpen(true);
+                        } else {
+                          likeProject(record.id);
+                        }
+                      }}
+                    >
+                      ❤️
+                    </Button>
 
-    </div >
+                    <Typography>Likes: {record.fields.Likes}</Typography>
+                  </CardFooter>
+                </Card>
+              </div>
+            );
+          }
+        })}
+      </div>
+      <LoginModal modalIsOpen={modalIsOpen} setIsOpen={setIsOpen} />
+    </>
   );
 };
-
 
 export default AirtableDataFetcher;
