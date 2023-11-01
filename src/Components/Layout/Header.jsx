@@ -47,6 +47,16 @@ export default function Header() {
         color="blue-gray"
         className="p-1 font-normal"
       >
+        <Link to="/recursos" className="flex items-center">
+          Recursos
+        </Link>
+      </Typography>
+      <Typography
+        as="li"
+        variant="small"
+        color="blue-gray"
+        className="p-1 font-normal"
+      >
         <Link to="/contacto" className="flex items-center">
           Contacto
         </Link>
