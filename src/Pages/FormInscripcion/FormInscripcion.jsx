@@ -9,8 +9,8 @@ function FormInscripcion() {
       <Header />
       <div className="container  mx-auto">
         <AirtableForm
-          base_id="appuPpMhTxQnKDkyi"
-          table="shra6pvTgFOMH8DL9"
+          base_id="appBeKR9KD274TXf2"
+          table="shr8D7fvLQNq1ENie"
         />
       </div>
       <Footer />
@@ -19,6 +19,3 @@ function FormInscripcion() {
 }
 
 export default FormInscripcion
-
-
-
