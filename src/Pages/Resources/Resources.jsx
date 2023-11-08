@@ -4,9 +4,7 @@ import {
   Card,
   CardHeader,
   CardBody,
-  CardFooter,
   Typography,
-  Button,
 } from "@material-tailwind/react";
 import { Link } from "react-router-dom";
 
@@ -15,6 +13,11 @@ import fase2 from '../../assets/fase2.png'
 import fase3 from '../../assets/fase3.png'
 import fase4 from '../../assets/fase4.png'
 import bmcanvas from '../../assets/bmcanvas.png'
+import userPersona from '../../assets/userPersona.png'
+import concept from '../../assets/concept.png'
+import entrevistas from '../../assets/entrevista.png'
+import mentor from '../../assets/mentor.png'
+
 function Recursos() {
   return (
     <>
@@ -87,8 +90,7 @@ function Recursos() {
           </Link>
         </Card>
         <Card className="mt-6">
-          <Link to="https://drive.google.com/file/d/1Y_ZkXLb21ioxQdNaO6xuQFFSxkkBRkgf/view?usp=drive_link
-">
+          <Link to="https://drive.google.com/file/d/1Y_ZkXLb21ioxQdNaO6xuQFFSxkkBRkgf/view?usp=drive_link">
             <CardHeader color="blue-gray" className="relative h-56">
               <img
                 src={bmcanvas}
@@ -103,7 +105,70 @@ function Recursos() {
             </CardBody>
           </Link>
         </Card>
-
+        <Card className="mt-6">
+          <Link to="https://drive.google.com/file/d/1eoevGc68gJR-Jw3SblxasXpABIxBYR7W/view?usp=sharing">
+            <CardHeader color="blue-gray" className="relative h-56">
+              <img
+                src={userPersona}
+                alt="card-image"
+                className="object-cover w-full h-full"
+              />
+            </CardHeader>
+            <CardBody className="flex flex-col">
+              <Typography>
+                User Persona Canvas
+              </Typography>
+            </CardBody>
+          </Link>
+        </Card>
+        <Card className="mt-6">
+          <Link to="https://drive.google.com/file/d/1sUD8Jrpt-SdR8Wkoi8GLTHRWpqHVeZk6/view?usp=sharing">
+            <CardHeader color="blue-gray" className="relative h-56">
+              <img
+                src={concept}
+                alt="card-image"
+                className="object-cover w-full h-full"
+              />
+            </CardHeader>
+            <CardBody className="flex flex-col">
+              <Typography>
+                Concept Card
+              </Typography>
+            </CardBody>
+          </Link>
+        </Card>
+        <Card className="mt-6">
+          <Link to="https://drive.google.com/file/d/1i-VRaVExFRdpd3LXR6MlqtADi2VOOVlu/view?usp=sharing">
+            <CardHeader color="blue-gray" className="relative h-56">
+              <img
+                src={entrevistas}
+                alt="card-image"
+                className="object-cover w-full h-full"
+              />
+            </CardHeader>
+            <CardBody className="flex flex-col">
+              <Typography>
+                Entrevistas Efectivas
+              </Typography>
+            </CardBody>
+          </Link>
+        </Card>
+        <Card className="mt-6">
+          <Link to="https://drive.google.com/file/d/1Y89Jwau5MEMWJ_M-FvC3rpR6lpWYAR1k/view?usp=sharing">
+            <CardHeader color="blue-gray" className="relative h-56">
+              <img
+                src={mentor}
+                alt="card-image"
+                className="object-cover w-full h-full"
+              />
+            </CardHeader>
+            <CardBody className="flex flex-col">
+              <Typography>
+                Que debo buscar de un mentor
+              </Typography>
+            </CardBody>
+          </Link>
+        </Card>
       </div>
       <Footer />
     </>
