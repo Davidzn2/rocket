@@ -12,7 +12,12 @@ function FormInscripcion() {
           base_id="appBeKR9KD274TXf2"
           table="shr8D7fvLQNq1ENie"
         />
-      </div>
+        <h2 className="text-4xl font-bold mb-4"> Puedes llenar tu formato de User Persona Canvas despues del Business Model Canvas</h2>
+        <AirtableForm
+          base_id="appq8GhQuyBsGU7Lm"
+          table="shrkXRtxtuDD5u3Kt"
+        />
+      </div >
       <Footer />
     </>
   )

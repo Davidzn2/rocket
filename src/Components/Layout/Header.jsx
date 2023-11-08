@@ -78,7 +78,7 @@ export default function Header() {
         <div className="hidden lg:block">{navList}</div>
         <Link to="/inscribete">
           <Button variant="gradient" size="sm" className="hidden lg:inline-block">
-            Llena la siguiente etapa
+            Fase de deseabilidad
           </Button>
         </Link>
         <IconButton
@@ -124,7 +124,7 @@ export default function Header() {
           {navList}
           <Link to="/inscribete">
             <Button variant="gradient" size="sm" fullWidth className="mb-2">
-              Llena la siguiente etapa
+              Fase de deseabilidad
             </Button>
           </Link>
         </div>
