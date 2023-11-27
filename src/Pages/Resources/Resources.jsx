@@ -8,6 +8,7 @@ import {
 } from "@material-tailwind/react";
 import { Link } from "react-router-dom";
 
+
 import fase1 from '../../assets/fase1.png'
 import fase2 from '../../assets/fase2.png'
 import fase3 from '../../assets/fase3.png'
@@ -17,13 +18,30 @@ import userPersona from '../../assets/userPersona.png'
 import concept from '../../assets/concept.png'
 import entrevistas from '../../assets/entrevista.png'
 import mentor from '../../assets/mentor.png'
-
+import productCanvas from '../../assets/product-canvas.png'
+import calendarNew from '../../assets/calendarioNew.png'
 function Recursos() {
   return (
     <>
       <Header />
       <h1 className="text-3xl font-bold text-center	m-10">Recursos que te van a ayudar</h1>
-
+      <Link to="https://drive.google.com/file/d/1r3rbi9B_jgOLJ77ITfg8Hsar3qSmFqVz/view?usp=sharing">
+        <img
+          src={calendarNew}
+          alt="card-image"
+          className="w-full h-96 object-contain "
+        />
+      </Link>
+      <div className="flex justify-center items-center h-32">
+        <a
+          href="https://docs.google.com/spreadsheets/d/1qDUBv1fNGjO_gX54iZ9yNh2dt3jG5a5X/edit?usp=drive_link&ouid=116031124690237598990&rtpof=true&sd=true"
+          target="_blank"
+          rel='noreferrer'
+          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded inline-block"
+        >
+          Descarga la plantilla de viabilidad
+        </a>
+      </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
         <Card className="mt-6">
           <Link to="https://drive.google.com/file/d/1iIG8VtAUUZvBTSe6pFiEADQ0xpjgYtl3/view?usp=sharing">
@@ -165,6 +183,22 @@ function Recursos() {
             <CardBody className="flex flex-col">
               <Typography>
                 Que debo buscar de un mentor
+              </Typography>
+            </CardBody>
+          </Link>
+        </Card>
+        <Card className="mt-6">
+          <Link to="https://drive.google.com/file/d/1pyQDd-h1a1viSy0zp91W07VrR6QxoWW3/view?usp=sharing">
+            <CardHeader color="blue-gray" className="relative h-56">
+              <img
+                src={productCanvas}
+                alt="card-image"
+                className="object-cover w-full h-full"
+              />
+            </CardHeader>
+            <CardBody className="flex flex-col">
+              <Typography>
+                Product Canvas
               </Typography>
             </CardBody>
           </Link>
