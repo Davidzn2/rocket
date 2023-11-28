@@ -20,6 +20,8 @@ import entrevistas from '../../assets/entrevista.png'
 import mentor from '../../assets/mentor.png'
 import productCanvas from '../../assets/product-canvas.png'
 import calendarNew from '../../assets/calendarionew.png'
+import validacion from '../../assets/validacion.png'
+
 function Recursos() {
   return (
     <>
@@ -199,6 +201,22 @@ function Recursos() {
             <CardBody className="flex flex-col">
               <Typography>
                 Product Canvas
+              </Typography>
+            </CardBody>
+          </Link>
+        </Card>
+        <Card className="mt-6">
+          <Link to="https://drive.google.com/file/d/1PMdM7nfKIOL2Y4LYHiI7mAsjJwHc3gEh/view?usp=sharing">
+            <CardHeader color="blue-gray" className="relative h-56">
+              <img
+                src={validacion}
+                alt="card-image"
+                className="object-cover w-full h-full"
+              />
+            </CardHeader>
+            <CardBody className="flex flex-col">
+              <Typography>
+                CANVAS DE VALIDACIÓN DE PROYECTOS
               </Typography>
             </CardBody>
           </Link>
