@@ -19,21 +19,22 @@ import concept from '../../assets/concept.png'
 import entrevistas from '../../assets/entrevista.png'
 import mentor from '../../assets/mentor.png'
 import productCanvas from '../../assets/product-canvas.png'
-import calendarNew from '../../assets/calendarionew.png'
+import calendarNew from '../../assets/fechasok.png'
 import validacion from '../../assets/validacion.png'
 
 function Recursos() {
   return (
     <>
       <Header />
-      <h1 className="text-3xl font-bold text-center	m-10">Recursos que te van a ayudar</h1>
-      <Link to="https://drive.google.com/file/d/1r3rbi9B_jgOLJ77ITfg8Hsar3qSmFqVz/view?usp=sharing">
-        <img
-          src={calendarNew}
-          alt="card-image"
-          className="w-full h-96 object-contain "
-        />
-      </Link>
+      <h1 className="text-3xl font-bold text-center	m-10 ">Recursos que te van a ayudar</h1>
+      <div className="bg-black">
+          <img
+            src={calendarNew}
+            alt="card-image"
+            className="w-full h-96 object-contain "
+          />
+      </div>
+
       <div className="flex justify-center items-center h-32">
         <a
           href="https://docs.google.com/spreadsheets/d/1qDUBv1fNGjO_gX54iZ9yNh2dt3jG5a5X/edit?usp=drive_link&ouid=116031124690237598990&rtpof=true&sd=true"
