@@ -19,7 +19,7 @@ import concept from '../../assets/concept.png'
 import entrevistas from '../../assets/entrevista.png'
 import mentor from '../../assets/mentor.png'
 import productCanvas from '../../assets/product-canvas.png'
-import calendarNew from '../../assets/fechasok.png'
+import calendarNew from '../../assets/CALENNEW.png'
 import validacion from '../../assets/validacion.png'
 
 function Recursos() {
