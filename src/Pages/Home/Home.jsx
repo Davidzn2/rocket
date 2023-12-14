@@ -1,6 +1,10 @@
 import Header from '../../Components/Layout/Header'
 import Footer from '../../Components/Layout/Footer'
 import Carousel from '../../Components/Carousel/CarouselWithContent';
+import { Link } from 'react-router-dom'
+import {
+  Button
+} from "@material-tailwind/react";
 // import Calendar from '../../Components/Calendar/Calendar'
 import Gallery from '../../Components/Gallery/Gallery'
 // Images
@@ -10,6 +14,7 @@ import wyi from '../../assets/LOGOS/wyi-ok.png'
 import Blue from '../../assets/LOGOS/Blue_Ivy_Logo.png'
 import Maguen from '../../assets/LOGOS/maguen.png'
 import calendar from '../../assets/calendario4.png'
+import AirtableDataFetcher from '../../Components/dataFetcher';
 function App() {
   return (
     <>
@@ -31,6 +36,15 @@ function App() {
       <div className="flex justify-center">
         <img src={calendar} alt="" />
       </div>
+      <div className="container mx-auto px-4 my-20 text-center">
+        <h2 className="text-4xl font-bold mb-4">LeaderBoard</h2>
+        <AirtableDataFetcher projects={4} />
+        <Link to="/proyectos">
+          <Button>
+            Ver todos los proyectos
+          </Button>
+        </Link>
+      </div>
       <Gallery />
       <div className="logos p-20">
         <div className="flex w-full justify-center items-center">
@@ -40,7 +54,6 @@ function App() {
         </div>
         <a href="https://www.israelbonds.com/" target="_blank" rel="noopener noreferrer">
           <div className="flex h-80 w-full justify-center items-center">
-
             <img src={ibonds} className="h-full w-fit" alt="" />
           </div>
         </a>
