@@ -9,15 +9,15 @@ function FormInscripcion() {
       <Header />
       <div className="container  mx-auto">
         <AirtableForm
-          base_id="appcu8fwkEIm6Bbn9"
+          base_id="appIvipfzkKGBUdv4"
 
-          table="shrF9Hov6MgYiJ5pU"
+          table="shrWPSBUAsiuF80Fl"
         />
-        <h2 className="text-4xl font-bold mb-4"> Puedes llenar tu formato de Canvas de validación de proyecto después del Product Canvas</h2>
+        {/* <h2 className="text-4xl font-bold mb-4"> Puedes llenar tu formato de Canvas de validación de proyecto después del Product Canvas</h2>
         <AirtableForm
           base_id="appQCUInQ1ubFGJzr"
           table="shrwLRSwHI6ZhdYfc"
-        />
+        /> */}
       </div >
       <Footer />
     </>

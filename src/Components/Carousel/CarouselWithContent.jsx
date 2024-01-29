@@ -29,7 +29,7 @@ export default function CarouselWithContent() {
             <div className="flex gap-2">
               <Link to="/inscribete">
                 <Button size="lg" color="white">
-                  Fase de Factibilidad
+                  Fase de Viabilidad
                 </Button>
               </Link>
             </div>
@@ -54,7 +54,7 @@ export default function CarouselWithContent() {
             <div className="flex gap-2">
               <Link to="/inscribete">
                 <Button size="lg" color="white">
-                  Fase de Factibilidad
+                  Fase de Viablidad
                 </Button>
               </Link>
             </div>
@@ -79,7 +79,7 @@ export default function CarouselWithContent() {
             <div className="flex gap-2">
               <Link to="/inscribete">
                 <Button size="lg" color="white">
-                  Fase de Factibilidad
+                  Fase de Viablidad
                 </Button>
               </Link>
             </div>
@@ -104,7 +104,7 @@ export default function CarouselWithContent() {
             <div className="flex gap-2">
               <Link to="/inscribete">
                 <Button size="lg" color="white">
-                  Fase de Factibilidad
+                  Fase de Viablidad
                 </Button>
               </Link>
             </div>
