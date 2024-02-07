@@ -11,6 +11,7 @@ import Login from '../Pages/Login/Login'
 import Contact from '../Pages/Contact/Contact'
 import Project from "../Pages/Project/Project";
 import Recursos from "../Pages/Resources/Resources";
+import VideosYeshiva from "../Pages/VideosYeshiva/VideosYeshiva";
 
 function MyRoutes() {
   return (
@@ -23,6 +24,7 @@ function MyRoutes() {
         <Route path="/contacto" element={<Contact />} />
         <Route path="/proyecto/:id" element={<Project />} />
         <Route path="/recursos" element={<Recursos />} />
+        <Route path="/videos" element={<VideosYeshiva/>} />
       </Routes>
     </BrowserRouter>
   )

@@ -36,6 +36,7 @@ function App() {
       <div className="flex justify-center">
         <img src={calendar} alt="" />
       </div>
+
       <div className="container mx-auto px-4 my-20 text-center">
         <h2 className="text-4xl font-bold mb-4">LeaderBoard</h2>
         <AirtableDataFetcher projects={4} />
