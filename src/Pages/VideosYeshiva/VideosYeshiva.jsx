@@ -14,13 +14,12 @@ import {
   Typography,
   Button,
 } from "@material-tailwind/react";
-import PerfectSolutions from '../../assets/videos/PerfectSolutions_Instagram.mp4'
-import HairFilter from '../../assets/videos/HairFilter_Instagram.mp4'
-import DesignYourDay from '../../assets/videos/DesignYourDay_Instagram.mp4'
+// import PerfectSolutions from '../../assets/videos/PerfectSolutions_Instagram.mp4'
+// import HairFilter from '../../assets/videos/HairFilter_Instagram.mp4'
+// import DesignYourDay from '../../assets/videos/DesignYourDay_Instagram.mp4'
 
 function VideosYeshiva() {
   const [data, setData] = useState([]);
-  const [record, setRecord] = useState({})
   const [modalIsOpen, setIsOpen] = useState(false);
   const apiKey =
     "patHyY2OjefFuIDOn.86253e204fdd2f636e0300f2fa54e77b0f000d44d317fe80960fb9be3fc1a669";
