@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import LoginModal from "../../Components/LoginModal/LoginModal";
 
 import axios from "axios";
@@ -19,27 +19,55 @@ import HairFilter from '../../assets/videos/HairFilter_Instagram.mp4'
 import DesignYourDay from '../../assets/videos/DesignYourDay_Instagram.mp4'
 
 function VideosYeshiva() {
+  const [data, setData] = useState([]);
+  const [record, setRecord] = useState({})
   const [modalIsOpen, setIsOpen] = useState(false);
-  // const likeProject = async (record_id) => {
-  //   console.log(record_id);
-  //   try {
-  //     const response = await axios.post(
-  //       `${import.meta.env.VITE_BASE_URL}/vote`,
-  //       {
-  //         record_id,
-  //       },
-  //       {
-  //         headers: {
-  //           authorization: `${localStorage.getItem("token")}`,
-  //         },
-  //       }
-  //     );
-  //     alert(`Te quedan ${3 - response.data.votes} votos`);
-  //   } catch (error) {
-  //     alert(error.response.data.error);
-  //     console.error("Error al actualizar el registro:", error);
-  //   }
-  // };
+  const [likes, setLikes] = useState(0)
+  const apiKey =
+    "patHyY2OjefFuIDOn.86253e204fdd2f636e0300f2fa54e77b0f000d44d317fe80960fb9be3fc1a669";
+  const baseId = "appuPpMhTxQnKDkyi";
+  const table = "REGISTRO";
+  const config = {
+    headers: {
+      Authorization: `Bearer ${apiKey}`,
+    },
+  };
+
+  const fetchData = async () => {
+    try {
+      const response = await axios.get(
+        `https://api.airtable.com/v0/${baseId}/${table}/`,
+        config
+      );
+      setData(response.data.records);
+    } catch (error) {
+      console.error("Error fetching data:", error);
+    }
+  };
+
+  useEffect(() => {
+    fetchData();
+  }, []);
+  const likeProject = async (record_id) => {
+    console.log(record_id);
+    try {
+      const response = await axios.post(
+        `${import.meta.env.VITE_BASE_URL}/vote`,
+        {
+          record_id,
+        },
+        {
+          headers: {
+            authorization: `${localStorage.getItem("token")}`,
+          },
+        }
+      );
+      alert(`Te quedan ${3 - response.data.votes} votos`);
+    } catch (error) {
+      alert(error.response.data.error);
+      console.error("Error al actualizar el registro:", error);
+    }
+  };
   return (
     <>
       <Header />
@@ -48,30 +76,12 @@ function VideosYeshiva() {
         <div className="flex items-center justify-center ">
           <img src={ibonds} className="w-1/5" alt="" />
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-3">
           <Card className="mt-6">
             <CardHeader color="blue-gray" className="relative ">
               <video src={PerfectSolutions} width="400" height="200" controls />
             </CardHeader>
             <CardFooter className="pt-0">
-              {/* <Button onClick={() => {
-                if (localStorage.getItem("token") === null) {
-                  setIsOpen(true);
-                } else {
-                  likeProject(record.id);
-                }
-              }}
-              >
-                ❤️
-              </Button>
-              <Typography>Likes: {record.fields.Likes}</Typography> */}
-            </CardFooter>
-          </Card>
-          <Card className="mt-6">
-            <CardHeader color="blue-gray" className="relative ">
-              <video src={HairFilter} width="400" height="200" controls />
-            </CardHeader>
-            {/* <CardFooter className="pt-0">
               <Button onClick={() => {
                 if (localStorage.getItem("token") === null) {
                   setIsOpen(true);
@@ -82,14 +92,32 @@ function VideosYeshiva() {
               >
                 ❤️
               </Button>
-              <Typography>Likes: {record.fields.Likes}</Typography>
-            </CardFooter> */}
+              <Typography>Likes: {likes}</Typography>
+            </CardFooter>
+          </Card>
+          <Card className="mt-6">
+            <CardHeader color="blue-gray" className="relative ">
+              <video src={HairFilter} width="400" height="200" controls />
+            </CardHeader>
+            <CardFooter className="pt-0">
+              <Button onClick={() => {
+                if (localStorage.getItem("token") === null) {
+                  setIsOpen(true);
+                } else {
+                  likeProject(record.id);
+                }
+              }}
+              >
+                ❤️
+              </Button>
+              <Typography>Likes: {likes}</Typography>
+            </CardFooter>
           </Card>
           <Card className="mt-6">
             <CardHeader color="blue-gray" className="relative ">
               <video src={DesignYourDay} width="400" height="200" controls />
             </CardHeader>
-            {/* <CardFooter className="pt-0">
+            <CardFooter className="pt-0">
               <Button onClick={() => {
                 if (localStorage.getItem("token") === null) {
                   setIsOpen(true);
@@ -101,8 +129,8 @@ function VideosYeshiva() {
                 ❤️
               </Button>
 
-              <Typography>Likes: {record.fields.Likes}</Typography>
-            </CardFooter> */}
+              <Typography>Likes: {likes}</Typography>
+            </CardFooter>
           </Card>
         </div>
       </div>
