@@ -45,6 +45,16 @@ function Recursos() {
           Descarga la plantilla de viabilidad
         </a>
       </div>
+      <div className="flex justify-center items-center h-32">
+        <a
+          href="https://drive.google.com/file/d/1oH7as5APFOEYpJAFZ8LnHOoj24U4v07R/view?usp=sharing"
+          target="_blank"
+          rel='noreferrer'
+          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded inline-block"
+        >
+          Descarga el one page
+        </a>
+      </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
         <Card className="mt-6">
           <Link to="https://drive.google.com/file/d/1iIG8VtAUUZvBTSe6pFiEADQ0xpjgYtl3/view?usp=sharing">
@@ -95,7 +105,7 @@ function Recursos() {
           </Link>
         </Card>
         <Card className="mt-6">
-          <Link to="https://drive.google.com/file/d/1oV3ptXsWe53yG8yz1hIqEylWAZLmkUry/view?usp=sharing">
+          <Link to="https://drive.google.com/file/d/1309raHX6HBLhiXdJkz6NNtfpAn0UMMRp/view?usp=sharing">
             <CardHeader color="blue-gray" className="relative h-56">
               <img
                 src={fase4}
