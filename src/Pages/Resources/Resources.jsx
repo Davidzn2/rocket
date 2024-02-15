@@ -35,7 +35,7 @@ function Recursos() {
           />
       </div>
 
-      <div className="flex justify-center items-center h-32">
+      {/* <div className="flex justify-center items-center h-32">
         <a
           href="https://docs.google.com/spreadsheets/d/1qDUBv1fNGjO_gX54iZ9yNh2dt3jG5a5X/edit?usp=drive_link&ouid=116031124690237598990&rtpof=true&sd=true"
           target="_blank"
@@ -44,7 +44,7 @@ function Recursos() {
         >
           Descarga la plantilla de viabilidad
         </a>
-      </div>
+      </div> */}
       <div className="flex justify-center items-center h-32">
         <a
           href="https://drive.google.com/file/d/1oH7as5APFOEYpJAFZ8LnHOoj24U4v07R/view?usp=sharing"
