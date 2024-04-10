@@ -31,7 +31,7 @@ function App() {
         </div>
       </div>
       <div className="flex justify-center">
-        <iframe width="80%" height="615" src="https://www.youtube.com/embed/CZ8Ac1oQ-5I?si=6TH4MjSZqHQvsJzU" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <iframe width="80%" height="300" src="https://www.youtube.com/embed/CZ8Ac1oQ-5I?si=6TH4MjSZqHQvsJzU" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
       </div>
       <div className="flex justify-center">
         <img src={calendar} alt="" />
@@ -46,7 +46,8 @@ function App() {
           </Button>
         </Link>
       </div>
-      <Gallery />
+
+      {/* <Gallery /> */}
       <div className="logos p-20">
         <div className="flex w-full justify-center items-center">
           <h2 className=" text-4xl font-bold">
@@ -54,7 +55,7 @@ function App() {
           </h2>
         </div>
         <a href="https://www.israelbonds.com/" target="_blank" rel="noopener noreferrer">
-          <div className="flex h-80 w-full justify-center items-center">
+          <div className="flex w-full justify-center items-center">
             <img src={ibonds} className="h-full w-fit" alt="" />
           </div>
         </a>

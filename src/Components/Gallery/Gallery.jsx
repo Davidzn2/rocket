@@ -43,9 +43,6 @@ function Gallery() {
 
   return (
     <div className="container flex">
-      <div className="w-1/2 p-8 flex justify-center items-center">
-        <h2 className="text-5xl font-bold">Así se vivió Rocket Challenge 2022</h2>
-      </div>
 
       <div className="w-1/2 p-8">
         <div className="carrusel flex items-center">
