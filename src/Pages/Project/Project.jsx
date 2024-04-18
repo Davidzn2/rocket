@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import Header from "../../Components/Layout/Header";
-import Footer from "../../Components/Layout/Footer";
+// import Header from "../../Components/Layout/Header";
+// import Footer from "../../Components/Layout/Footer";
 import axios from "axios";
 import {
   Card,
@@ -67,7 +67,7 @@ function Project() {
 
   return (
     <>
-      <Header />
+      {/* <Header /> */}
       {data && (
         <Card className="mt-6">
           <CardHeader color="blue-gray" className="relative flex">
@@ -114,7 +114,7 @@ function Project() {
           </CardFooter>
         </Card>
       )}
-      <Footer />
+      {/* <Footer /> */}
       <LoginModal modalIsOpen={modalIsOpen} setIsOpen={setIsOpen} />
     </>
   );
